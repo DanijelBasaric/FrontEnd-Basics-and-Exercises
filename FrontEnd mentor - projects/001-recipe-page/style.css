@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --clr-primary-100: hsl(30, 18%, 87%);
+    --clr-primary-150: hsl(30, 54%, 90%);
+    --clr-primary-600: hsl(30, 10%, 34%);
+    --clr-primary-900: hsl(24, 5%, 18%);
+
+    --clr-accent-100: hsl(330, 100%, 98%);
+    --clr-accent-400: hsl(14, 45%, 36%);
+    --clr-accent-700: hsl(332, 51%, 32%);
+
+    --ff-primary: 'Outfit', sans-serif;
+    --ff-accent: 'Young serif', sans-serif;
+
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-accent);
+
+    --padding: 1.5rem
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    /* font: inherit; */
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* utility classes */
+
+.wrapper {
+    --max-width: 80ch;
+    padding: var(--padding);
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+    padding: var(--padding);
+
+    border-radius: 1rem;
+    background-color: var(--clr-neutral-100);
+}
+
+/* general styling */
+
+body {
+    background-color: hsl(330, 100%, 95%);
+    padding-block: 10rem;
+    color: var(--clr-primary-600);
+    font-family: var(--ff-body);
+}
+
+h1,
+h2 {
+    font-family: var(--ff-heading);
+    font-weight: lighter;
+}
+
+h1 {
+    color: var(--clr-primary-900);
+}
+
+h2 {
+    color: var(--clr-accent-400);
+}
+
+h3 {
+    color: var(--clr-accent-700);
+}
+
+section {
+    margin: var(--padding);
+}
+
+ul,
+ol {
+    list-style-position: outside;
+}
+
+li {
+    padding-left: 1rem;
+}
+
+.listing-outside {
+    padding: var(--padding) var(--padding) 0 var(--padding);
+}
+
+.horizontal-rule {
+    padding-inline: var(--padding);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--clr-primary-150);
+}
+
+/* hero */
+
+.hero-image {
+    padding: var(--padding);
+}
+
+img {
+    border-radius: .75rem;
+}
+
+/* prepartion */
+
+.preparation {
+    padding: var(--padding);
+    background-color: var(--clr-accent-100);
+    border-radius: .75rem;
+}
+
+.preparation ul ::marker {
+    color: var(--clr-accent-700);
+}
+
+/* instructions */
+
+span {
+    font-weight: bold;
+}
+
+/* nutriton */
+
+.nutrition div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-block: .75rem;
+    padding-inline: 2rem;
+}
+
+.nutrition div p span {
+    font-weight: bold;
+    color: var(--clr-accent-400);
+}
+
+/* media */
+
+@media (max-width: 24rem) {
+    .wrapper {
+        padding: 0;
+        width: 100%;
+    }
+
+    .hero-image {
+        padding: 0;
+        width: 100%;
+    }
+
+    img {
+        border-radius: 0rem;
+    }
+
+}
