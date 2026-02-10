@@ -1,0 +1,253 @@
+
+@import 'delovi/mixins';
+@import 'delovi/variables';
+@import 'delovi/base';
+@import 'delovi/typography';
+
+
+/* header sekcija
+------------------------------ */
+
+header {
+  .naslovna {
+    background-color: $black-color;
+    padding: 0.25rem 0;
+
+    .container {
+      @include flex(space-between, center);
+      @include responsive(mobilni){
+        @include flex(center, center, column);
+      }
+   
+      .posebni {
+        color: $yellow-color;
+        display: flex;
+        align-items: center;
+
+        h3 {
+          padding-right: 0.75rem;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        i {
+          font-size: 1.75rem;
+        }
+      }
+
+      .icone {
+        color: $white-color;
+
+        i {
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+
+  nav {
+    padding: 0.5rem 0;
+    background-color: $white-color;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+
+      li {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+  .headerNaslov {
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    @include flex(center, center);
+    @include responsive(mobilni){
+      height: 120vh;
+    }
+    .container {
+      @include flex(center, center);
+
+      .headerNaslovTekst {
+        border: 1px solid $white-color;
+        background-color: rgba($litegreen-color, 0.7);
+        padding: 4rem 3rem;
+        text-align: center;
+        display: block;
+
+        h3 {
+          color: $white-color;
+          padding: 1rem 0;
+          font-weight: 400;
+          margin-bottom: 1rem;
+         
+        }
+
+        a {
+          background-color: $yellow-color;
+          color: $black-color;
+          padding: 0.75rem 1.5rem;
+          transition: 0.5s;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding: 1rem 1.5rem;
+
+          &:hover {
+            background-color: $black-color;
+            color: $yellow-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*  about us
+------------------------------ */
+
+.aboutUs {
+  background-image: linear-gradient(rgba($litegreen-color, 0.9),
+      rgba($litegreen-color, 0.9)),
+    url(img/onama.jpg);
+  background-position: bottom;
+  background-size: cover;
+  height: 60vh;
+  @include responsive(mobilni){
+    height: 100vh;
+  }
+  @include flex(center, center);
+
+  .container {
+    color: $white-color;
+    text-align: center;
+
+    p {
+      color: $white-color;
+    }
+  }
+}
+
+/*  locations
+------------------------------ */
+
+.locations {
+  display: flex;
+  flex-wrap: wrap;
+
+  article {
+    flex: 0 0 25%;
+    @include responsive(mobilni){
+      flex: 0 0 50%;
+    }
+    text-align: center;
+    color: $white-color;
+
+    img {
+      border-bottom: 0.25rem solid $yellow-color;
+    }
+
+    h4 {
+      background-color: $black-color;
+      padding: 0.5rem 0;
+    }
+
+    &:nth-of-type(even) {
+      h4 {
+        background-color: $litegreen-color;
+      }
+    }
+  }
+}
+
+/*  locations details
+------------------------------ */
+
+.locationsDetails {
+  display: flex;
+  flex-direction: column;
+  
+  article {
+    display: flex;
+    align-items: center;
+    // height: 45vh;
+    overflow: hidden;
+    @include responsive(mobilni){
+      flex-direction: column-reverse;
+      height: auto;
+    }
+       
+    .tekst {
+      flex: 0 0 50%;
+      padding-inline: 1rem;
+
+      h3 {
+        color: $litegreen-color;
+        text-align: center;
+      }
+
+      p {
+        text-align: justify;
+        line-height: 1.1;
+      }
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: row-reverse;
+      @include responsive(mobilni){
+        flex-direction: column-reverse;
+      }
+    }
+
+  }
+}
+
+/*  footer
+------------------------------ */
+
+footer {
+  background-image: linear-gradient(rgba($yellow-color, 0.9),
+      rgba($yellow-color, 0.9)),
+    url(img/footer.jpg);
+  text-align: center;
+  height: 45vh;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p{
+    padding:1rem 0;
+  }
+  form{
+    @include responsive(mobilni){
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  input{
+    padding: 1rem;
+    border: none;
+    @include responsive(mobilni){
+      margin: 5px;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $litegreen-color;
+    color: $white-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem 1.5rem;
+    border: none;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: $black-color;
+
+    }
+  }
+}

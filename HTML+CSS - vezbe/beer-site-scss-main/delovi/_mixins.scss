@@ -1,0 +1,14 @@
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin dugme($bgcolor, $color, $bghover, $hcolor) {
+    background-color: $bgcolor;
+    color: $color;
+    &:hover {
+        background-color: $bghover;
+        color: $hcolor;
+      }
+}

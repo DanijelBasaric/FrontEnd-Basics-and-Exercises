@@ -1,0 +1,360 @@
+@import "delovi/variables";
+@import "delovi/basics";
+@import "delovi/typography";
+@import "delovi/mixins";
+
+/* -------------header-------------------
+---------------------------------------*/
+header {
+  background-color: $primary;
+
+  .container {
+    .hero {
+      @include flex(space-between, center);
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .tekst {
+        flex: 0 0 50%;
+        text-align: left;
+
+        @media only screen and (max-width: 768px) {
+          text-align: center;
+          padding: 30px 0;
+        }
+
+        ul {
+          li:first-child a {
+            @include dugme($text, $white, $black, $white);
+          }
+
+          li:last-child a {
+            @include dugme($white, $text, $black, $white);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* -------------about--------------------
+---------------------------------------*/
+
+.about {
+  background-color: $lightgray;
+
+  .container {
+    article {
+      @include flex(space-between, center);
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .slika {
+        flex: 0 0 50%;
+
+        img {
+          box-shadow: 2rem 2rem $primary;
+        }
+      }
+
+      .tekst {
+        flex: 0 0 50%;
+        padding-left: 2rem;
+
+        @media only screen and (max-width: 768px) {
+          padding: $padding768;
+          text-align: center;
+        }
+      }
+    }
+
+    .brojevi {
+      @include flex(space-between, center);
+
+      .godina {
+        text-align: center;
+
+        h4 {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+/* -------------discover-----------------
+---------------------------------------*/
+
+.discover {
+  .container {
+    .discoverNaslov {
+      text-align: center;
+    }
+
+    .discoverDetail {
+      @include flex(space-between, center);
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .dicoverDetailSlika {
+        // flex: 0 0 50%;
+        // padding: $padding;
+        // object-fit: cover;
+        padding-inline: $padding;
+        @media only screen and (max-width: 768px) {
+          padding: $padding768;
+        }
+      }
+
+      .dicoverDetailText {
+        background-color: $lightgray;
+        flex: 0 0 50%;
+        padding: $padding;
+
+        @media only screen and (max-width: 768px) {
+          padding: $padding768;
+        }
+
+        h4 {
+          font-size: 3rem;
+          color: $primary;
+          text-align: left;
+          margin-top: 30px;
+        }
+
+        .dicoverDetailTextBrojevi {
+          @include flex(space-between, flex-start);
+          flex-wrap: wrap;
+
+          .dicoverDetailTextBrojeviDetail {
+            flex: 0 0 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .discoverDetail:last-child {
+    flex-direction: row-reverse;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .dicoverDetailText {
+      h4 {
+        color: $text;
+      }
+    }
+  }
+}
+
+/* -------------features-----------------
+---------------------------------------*/
+
+.features {
+
+  .container {
+
+    .featuresNaslov {
+      text-align: center;
+    }
+
+    .featuresDetail {
+      @include flex(space-between, center);
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .featuresDetailLevo {
+        flex: 0 0 50%;
+
+        img {
+          padding: $padding;
+        }
+      }
+
+      .featuresDetailDesno {
+        flex: 0 0 50%;
+        @include flex(center, center);
+        flex-direction: column;
+
+        article {
+          @include flex(center, center);
+
+          @media only screen and (max-width: 768px) {
+            flex-direction: column;
+          }
+
+          img {
+            width: 80px;
+          }
+        }
+      }
+    }
+
+    .featuresDetailIspod {
+      // padding: $padding;
+
+      @media only screen and (max-width: 768px) {
+        padding: $padding768;
+      }
+
+      @include flex(space-between, center);
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      article {
+        @include flex(center, center);
+        flex: 0 0 30%;
+        padding: 0 30px;
+
+        @media only screen and (max-width: 768px) {
+          flex-direction: column;
+          flex: 0 0 100%;
+          padding: 0;
+          text-align: center;
+        }
+
+        img {
+          width: 60px;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* -------------choose-------------------
+---------------------------------------*/
+
+.choose {
+
+  .container {
+    @include flex(center, center);
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .chooseImg {
+      padding: 70px;
+    }
+
+    .chooseDetail {
+      flex: 0 0 50%;
+
+      a {
+        @include dugme($primary, $text, orange, $text);
+      }
+    }
+  }
+}
+
+/* -------------process-----------------
+---------------------------------------*/
+
+.process {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/video-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  .container {
+    color: white;
+    text-align: center;
+
+    a {
+      @include dugme($primary, $text, orange, $text);
+      padding: 1rem 1.75rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+/* -------------follow------------------
+---------------------------------------*/
+
+.follow {
+  .container {
+    padding: $padding;
+
+    .followNaslov {
+      @include flex(space-between, center);
+
+      margin-bottom: 30px;
+
+      a {
+        @include dugme($primary, $text, orange, $text);
+        padding: 10px 20px;
+      }
+    }
+
+    .followSlike {
+      @include flex(space-between, center);
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .followSlikeItem {
+        flex: 0 0 19%;
+
+        @media only screen and (max-width: 768px) {
+          flex: 0 0 100%;
+          margin-bottom: 10px;
+        }
+
+      }
+    }
+  }
+}
+
+/* -------------footer-------------------
+---------------------------------------*/
+
+footer {
+  @include flex(center, center);
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .footerLevi {
+    color: $white;
+    text-align: center;
+    padding: 100px 100px;
+    // flex: 0 0 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("images/beer-party.jpg");
+    background-size: cover;
+
+    a {
+      @include dugme($primary, $text, orange, $text);
+    }
+  }
+
+  .footerDesni {
+    color: $white;
+    text-align: center;
+    padding: 100px 100px;
+    // flex: 0 0 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("images/bar-restock.jpg");
+    background-size: cover;
+
+    a {
+      @include dugme($primary, $text, orange, $text);
+    }
+  }
+}

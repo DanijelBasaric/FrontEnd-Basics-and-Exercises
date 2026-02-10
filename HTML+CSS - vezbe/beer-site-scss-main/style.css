@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Cairo&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 4.5rem 0.5rem;
+}
+
+a {
+  color: hsl(0, 0%, 90%);
+  text-decoration: none;
+}
+
+.dugme {
+  text-transform: uppercase;
+  padding: 0.4rem clamp(0.5rem, 0.5rem + 5vh, 4rem);
+  transition: 0.5s;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  color: hsl(0, 0%, 15%);
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: "Bungee", cursive;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: lighter;
+}
+@media only screen and (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  a {
+    font-size: smaller;
+  }
+}
+
+h1 {
+  font-size: clamp(2.25rem, 1rem + 5vw, 4.5rem);
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: clamp(2rem, 1rem + 5vw, 3.5rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+p {
+  line-height: 2;
+  margin: 2rem 0;
+}
+
+/* -------------header-------------------
+---------------------------------------*/
+header {
+  background-color: hsl(43, 88%, 61%);
+}
+header .container .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  header .container .hero {
+    flex-direction: column;
+  }
+}
+header .container .hero .tekst {
+  flex: 0 0 50%;
+  text-align: left;
+}
+@media only screen and (max-width: 768px) {
+  header .container .hero .tekst {
+    text-align: center;
+    padding: 30px 0;
+  }
+}
+header .container .hero .tekst ul li:first-child a {
+  background-color: hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 90%);
+}
+header .container .hero .tekst ul li:first-child a:hover {
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 90%);
+}
+header .container .hero .tekst ul li:last-child a {
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(0, 0%, 15%);
+}
+header .container .hero .tekst ul li:last-child a:hover {
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 90%);
+}
+
+/* -------------about--------------------
+---------------------------------------*/
+.about {
+  background-color: hsla(0, 0%, 58%, 0.09);
+}
+.about .container article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .about .container article {
+    flex-direction: column;
+  }
+}
+.about .container article .slika {
+  flex: 0 0 50%;
+}
+.about .container article .slika img {
+  box-shadow: 2rem 2rem hsl(43, 88%, 61%);
+}
+.about .container article .tekst {
+  flex: 0 0 50%;
+  padding-left: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .about .container article .tekst {
+    padding: 2.5rem 0;
+    text-align: center;
+  }
+}
+.about .container .brojevi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .container .brojevi .godina {
+  text-align: center;
+}
+.about .container .brojevi .godina h4 {
+  margin-bottom: 30px;
+}
+
+/* -------------discover-----------------
+---------------------------------------*/
+.discover .container .discoverNaslov {
+  text-align: center;
+}
+.discover .container .discoverDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .discover .container .discoverDetail {
+    flex-direction: column;
+  }
+}
+.discover .container .discoverDetail .dicoverDetailSlika {
+  padding-inline: 4.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .discover .container .discoverDetail .dicoverDetailSlika {
+    padding: 2.5rem 0;
+  }
+}
+.discover .container .discoverDetail .dicoverDetailText {
+  background-color: hsla(0, 0%, 58%, 0.09);
+  flex: 0 0 50%;
+  padding: 4.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .discover .container .discoverDetail .dicoverDetailText {
+    padding: 2.5rem 0;
+  }
+}
+.discover .container .discoverDetail .dicoverDetailText h4 {
+  font-size: 3rem;
+  color: hsl(43, 88%, 61%);
+  text-align: left;
+  margin-top: 30px;
+}
+.discover .container .discoverDetail .dicoverDetailText .dicoverDetailTextBrojevi {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.discover .container .discoverDetail .dicoverDetailText .dicoverDetailTextBrojevi .dicoverDetailTextBrojeviDetail {
+  flex: 0 0 50%;
+}
+.discover .discoverDetail:last-child {
+  flex-direction: row-reverse;
+}
+@media only screen and (max-width: 768px) {
+  .discover .discoverDetail:last-child {
+    flex-direction: column;
+  }
+}
+.discover .discoverDetail:last-child .dicoverDetailText h4 {
+  color: hsl(0, 0%, 15%);
+}
+
+/* -------------features-----------------
+---------------------------------------*/
+.features .container .featuresNaslov {
+  text-align: center;
+}
+.features .container .featuresDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .features .container .featuresDetail {
+    flex-direction: column;
+  }
+}
+.features .container .featuresDetail .featuresDetailLevo {
+  flex: 0 0 50%;
+}
+.features .container .featuresDetail .featuresDetailLevo img {
+  padding: 4.5rem;
+}
+.features .container .featuresDetail .featuresDetailDesno {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.features .container .featuresDetail .featuresDetailDesno article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .features .container .featuresDetail .featuresDetailDesno article {
+    flex-direction: column;
+  }
+}
+.features .container .featuresDetail .featuresDetailDesno article img {
+  width: 80px;
+}
+.features .container .featuresDetailIspod {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .features .container .featuresDetailIspod {
+    padding: 2.5rem 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .features .container .featuresDetailIspod {
+    flex-direction: column;
+  }
+}
+.features .container .featuresDetailIspod article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 30%;
+  padding: 0 30px;
+}
+@media only screen and (max-width: 768px) {
+  .features .container .featuresDetailIspod article {
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 0;
+    text-align: center;
+  }
+}
+.features .container .featuresDetailIspod article img {
+  width: 60px;
+  padding-right: 20px;
+}
+
+/* -------------choose-------------------
+---------------------------------------*/
+.choose .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .choose .container {
+    flex-direction: column;
+  }
+}
+.choose .container .chooseImg {
+  padding: 70px;
+}
+.choose .container .chooseDetail {
+  flex: 0 0 50%;
+}
+.choose .container .chooseDetail a {
+  background-color: hsl(43, 88%, 61%);
+  color: hsl(0, 0%, 15%);
+}
+.choose .container .chooseDetail a:hover {
+  background-color: orange;
+  color: hsl(0, 0%, 15%);
+}
+
+/* -------------process-----------------
+---------------------------------------*/
+.process {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/video-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.process .container {
+  color: white;
+  text-align: center;
+}
+.process .container a {
+  background-color: hsl(43, 88%, 61%);
+  color: hsl(0, 0%, 15%);
+  padding: 1rem 1.75rem;
+  border-radius: 50%;
+}
+.process .container a:hover {
+  background-color: orange;
+  color: hsl(0, 0%, 15%);
+}
+
+/* -------------follow------------------
+---------------------------------------*/
+.follow .container {
+  padding: 4.5rem;
+}
+.follow .container .followNaslov {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.follow .container .followNaslov a {
+  background-color: hsl(43, 88%, 61%);
+  color: hsl(0, 0%, 15%);
+  padding: 10px 20px;
+}
+.follow .container .followNaslov a:hover {
+  background-color: orange;
+  color: hsl(0, 0%, 15%);
+}
+.follow .container .followSlike {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .follow .container .followSlike {
+    flex-direction: column;
+  }
+}
+.follow .container .followSlike .followSlikeItem {
+  flex: 0 0 19%;
+}
+@media only screen and (max-width: 768px) {
+  .follow .container .followSlike .followSlikeItem {
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* -------------footer-------------------
+---------------------------------------*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+}
+footer .footerLevi {
+  color: hsl(0, 0%, 90%);
+  text-align: center;
+  padding: 100px 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/beer-party.jpg");
+  background-size: cover;
+}
+footer .footerLevi a {
+  background-color: hsl(43, 88%, 61%);
+  color: hsl(0, 0%, 15%);
+}
+footer .footerLevi a:hover {
+  background-color: orange;
+  color: hsl(0, 0%, 15%);
+}
+footer .footerDesni {
+  color: hsl(0, 0%, 90%);
+  text-align: center;
+  padding: 100px 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/bar-restock.jpg");
+  background-size: cover;
+}
+footer .footerDesni a {
+  background-color: hsl(43, 88%, 61%);
+  color: hsl(0, 0%, 15%);
+}
+footer .footerDesni a:hover {
+  background-color: orange;
+  color: hsl(0, 0%, 15%);
+}/*# sourceMappingURL=style.css.map */

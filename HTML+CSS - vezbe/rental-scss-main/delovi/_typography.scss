@@ -1,0 +1,29 @@
+/* typography
+------------------------------ */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem;
+  color: $white-color;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  color: $black-color;
+}
+
+a {
+  color: $litegreen-color;
+  text-decoration: none;
+}

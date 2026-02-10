@@ -1,0 +1,20 @@
+@mixin flex($justify, $align, $direction: row, $wrap: wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin responsive($velicina) {
+    @if $velicina == tablet {
+      @media screen and (max-width: 980px) {
+        @content;
+      }
+    }
+    @if $velicina == mobilni {
+      @media screen and (max-width: 650px) {
+        @content;
+      }
+    }
+  }

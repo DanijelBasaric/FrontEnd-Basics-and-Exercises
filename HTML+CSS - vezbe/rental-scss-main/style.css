@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(228, 228, 228);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* typography
+------------------------------ */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  color: #000;
+}
+
+a {
+  color: rgb(14, 124, 78);
+  text-decoration: none;
+}
+
+/* header sekcija
+------------------------------ */
+header .naslovna {
+  background-color: #000;
+  padding: 0.25rem 0;
+}
+header .naslovna .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 650px) {
+  header .naslovna .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+header .naslovna .container .posebni {
+  color: rgb(229, 233, 15);
+  display: flex;
+  align-items: center;
+}
+header .naslovna .container .posebni h3 {
+  padding-right: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+header .naslovna .container .posebni i {
+  font-size: 1.75rem;
+}
+header .naslovna .container .icone {
+  color: white;
+}
+header .naslovna .container .icone i {
+  padding-left: 1rem;
+}
+header nav {
+  padding: 0.5rem 0;
+  background-color: white;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li {
+  padding: 0 0.5rem;
+}
+header .headerNaslov {
+  background-image: url(img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 650px) {
+  header .headerNaslov {
+    height: 120vh;
+  }
+}
+header .headerNaslov .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header .headerNaslov .container .headerNaslovTekst {
+  border: 1px solid white;
+  background-color: rgba(14, 124, 78, 0.7);
+  padding: 4rem 3rem;
+  text-align: center;
+  display: block;
+}
+header .headerNaslov .container .headerNaslovTekst h3 {
+  color: white;
+  padding: 1rem 0;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+header .headerNaslov .container .headerNaslovTekst a {
+  background-color: rgb(229, 233, 15);
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+}
+header .headerNaslov .container .headerNaslovTekst a:hover {
+  background-color: #000;
+  color: rgb(229, 233, 15);
+}
+
+/*  about us
+------------------------------ */
+.aboutUs {
+  background-image: linear-gradient(rgba(14, 124, 78, 0.9), rgba(14, 124, 78, 0.9)), url(img/onama.jpg);
+  background-position: bottom;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 650px) {
+  .aboutUs {
+    height: 100vh;
+  }
+}
+.aboutUs .container {
+  color: white;
+  text-align: center;
+}
+.aboutUs .container p {
+  color: white;
+}
+
+/*  locations
+------------------------------ */
+.locations {
+  display: flex;
+  flex-wrap: wrap;
+}
+.locations article {
+  flex: 0 0 25%;
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width: 650px) {
+  .locations article {
+    flex: 0 0 50%;
+  }
+}
+.locations article img {
+  border-bottom: 0.25rem solid rgb(229, 233, 15);
+}
+.locations article h4 {
+  background-color: #000;
+  padding: 0.5rem 0;
+}
+.locations article:nth-of-type(even) h4 {
+  background-color: rgb(14, 124, 78);
+}
+
+/*  locations details
+------------------------------ */
+.locationsDetails {
+  display: flex;
+  flex-direction: column;
+}
+.locationsDetails article {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 650px) {
+  .locationsDetails article {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+}
+.locationsDetails article .tekst {
+  flex: 0 0 50%;
+  padding-inline: 1rem;
+}
+.locationsDetails article .tekst h3 {
+  color: rgb(14, 124, 78);
+  text-align: center;
+}
+.locationsDetails article .tekst p {
+  text-align: justify;
+  line-height: 1.1;
+}
+.locationsDetails article:nth-child(2) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 650px) {
+  .locationsDetails article:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+}
+
+/*  footer
+------------------------------ */
+footer {
+  background-image: linear-gradient(rgba(229, 233, 15, 0.9), rgba(229, 233, 15, 0.9)), url(img/footer.jpg);
+  text-align: center;
+  height: 45vh;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer p {
+  padding: 1rem 0;
+}
+@media screen and (max-width: 650px) {
+  footer form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer input {
+  padding: 1rem;
+  border: none;
+}
+@media screen and (max-width: 650px) {
+  footer input {
+    margin: 5px;
+  }
+}
+footer input[type=submit] {
+  background-color: rgb(14, 124, 78);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+  border: none;
+  transition: 0.5s;
+}
+footer input[type=submit]:hover {
+  background-color: #000;
+}/*# sourceMappingURL=style.css.map */
