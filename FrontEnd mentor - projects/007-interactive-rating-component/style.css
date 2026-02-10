@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+    --clr-neutral-100: hsl(0, 100%, 100%);
+    --clr-neutral-500: hsl(217, 12%, 63%);
+    --clr-neutral-800: hsl(213, 19%, 19%);
+    --clr-neutral-900: hsl(213, 19%, 13%);
+    --clr-neutral-950: hsl(216, 12%, 8%);
+
+    --clr-primary-500: hsl(25, 97%, 53%);
+
+    --ff-primary: "Overpass", sans-serif;
+
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-400: 1rem;
+    --fs-600: 1.5rem;
+    --fs-900: 1.625rem;
+
+    --padding: 1rem;
+
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* utility classes */
+
+.visually-hidden {
+    position: absolute;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+/* general styling */
+
+body {
+    font-family: var(--ff-body);
+    font-weight: var(--ff-regular);
+    font-size: 0.9375rem;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-950);
+
+    /* for this project only */
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* rating-component */
+
+.rating-component {
+    --component-padding: 2rem;
+    --component-gap: 1.75rem;
+
+    color: var(--clr-neutral-500);
+    background-color: var(--clr-neutral-900);
+    padding: var(--component-padding);
+    display: grid;
+    gap: var(--component-gap);
+    max-width: 38ch;
+    border-radius: 1rem;
+}
+
+.rating-component[data-visible] {
+    display: none;
+}
+
+.rating-component h1 {
+    color: var(--clr-neutral-100);
+    font-size: var(--fs-900);
+    padding-bottom: 1rem;
+}
+
+
+.rating-component .flex-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-component .flex-group>button,
+.image {
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-neutral-500);
+    font-weight: var(--fw-bold);
+    padding: .75rem;
+    border: 0;
+    border-radius: 100%;
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+}
+
+.flex-group>button:hover {
+    background-color: var(--clr-primary-500);
+    color: var(--clr-neutral-900);
+}
+
+.flex-group>button:focus,
+.button:focus {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-900);
+}
+
+.button {
+    padding: .5rem;
+    background-color: var(--clr-primary-500);
+    border: 0;
+    border-radius: 5rem;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    letter-spacing: 3px;
+
+}
+
+.button:hover {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-900);
+}
+
+#thank-component {
+    display: none;
+}
+
+#thank-component[data-visible] {
+    display: grid;
+    gap: var(--component-gap);
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+#thank-component>button {
+    border: 0;
+    padding: 1rem;
+    border-radius: 5rem;
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-primary-500);
+}
+
+/* attribution */
+
+.attribution {
+    margin: auto;
+    font-size: .6875rem;
+    text-align: center
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

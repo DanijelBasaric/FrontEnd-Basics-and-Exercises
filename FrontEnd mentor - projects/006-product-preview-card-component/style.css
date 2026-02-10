@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-300: hsl(30, 38%, 92%);
+    --clr-neutral-700: hsl(228, 12%, 48%);
+    --clr-neutral-900: hsl(212, 21%, 14%);
+
+    --clr-primary-500: hsl(158, 36%, 37%);
+    --clr-primary-700: hsl(158, 42%, 18%);
+
+
+    --ff-primary: "Montserrat", sans-serif;
+    --ff-accent: "Fraunces", serif;
+
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-accent);
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+
+    --fs-400: 1rem;
+    --fs-600: 1.5rem;
+    --fs-900: 2rem;
+
+    --padding: 1rem;
+
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* utility classes */
+
+.wrapper {
+    --max-width: 600px;
+    width: min(var(--max-width), 100%);
+    margin: auto;
+    background-color: var(--clr-neutral-100);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.even-columns {
+    display: grid;
+}
+
+@media (min-width: 600px) {
+
+    .even-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* general styling */
+
+body {
+    font-family: var(--ff-body);
+    font-weight: var(--ff-regular);
+    font-size: 0.875rem;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-300);
+
+    /* for this project only */
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+
+/* product-styles */
+
+.product-item {
+    padding: 3rem;
+    color: var(--clr-neutral-700);
+    display: grid;
+    text-wrap: balance;
+}
+
+.product-item h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.product-item h1,
+.product-item .product-price {
+    font-family: var(--ff-heading);
+}
+
+.product-item h1 {
+    color: var(--clr-neutral-900);
+    font-size: var(--fs-900);
+    font-weight: var(--fw-bold);
+    line-height: 1.1;
+}
+
+.product-item .product-price {
+    display: flex;
+    align-items: center;
+    gap: var(--padding);
+}
+
+.product-item .product-price .product-new-price {
+    color: var(--clr-primary-500);
+    font-family: var(--ff-heading);
+    font-size: var(--fs-900);
+    font-weight: var(--fw-bold);
+}
+
+.product-item .product-price .product-old-price {
+    font-family: var(--ff-primary);
+    text-decoration: line-through;
+}
+
+
+.button {
+    cursor: pointer;
+    border: 0;
+    padding: 0.5em 2em;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-500);
+    border-radius: 0.5rem;
+    font-weight: var(--fw-bold);
+    font-size: .925rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--padding);
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--clr-primary-700);
+}
+
+/* attribution */
+
+.attribution {
+    margin: auto;
+}
